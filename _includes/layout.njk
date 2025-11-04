@@ -5,25 +5,17 @@
   <title>{{ title }} | People Versus</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
-  <link rel="icon" href="/favicon.ico" />
-  {{ head | safe }}
-  <!-- Open Graph -->
-  <meta property="og:title" content="{{ title }} | People Versus" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="{{ page.url | url }}" />
-  <meta property="og:image" content="{{ '/images/og-default.jpg' | url }}" />
-  <meta property="og:site_name" content="People Versus" />
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="{{ '/style.css' | url }}" />
+  <link rel="icon" href="{{ '/favicon.ico' | url }}" />
 </head>
 <body>
   <main class="container">
     <header class="header">
-      <h1><a href="/">People Versus</a></h1>
+      <h1><a href="{{ '/' | url }}">People Versus</a></h1>
       <nav>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/tags/">Topics</a>
+        <a href="{{ '/' | url }}">Home</a>
+        <a href="{{ '/about/' | url }}">About</a>
+        <a href="{{ '/tags/' | url }}">Topics</a>
         <a href="https://peopleversus.substack.com/subscribe" target="_blank" rel="noopener"><strong>Support</strong></a>
       </nav>
       <hr/>
@@ -39,4 +31,4 @@
     </footer>
   </main>
 </body>
-
+</html>
