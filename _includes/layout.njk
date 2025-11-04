@@ -5,17 +5,17 @@
   <title>{{ title }} | People Versus</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
-  <link rel="stylesheet" href="{{ '/style.css' | url }}" />
-  <link rel="icon" href="{{ '/favicon.ico' | url }}" />
+  <link rel="stylesheet" href="{{ pathPrefix }}/style.css" />
+  <link rel="icon" href="{{ pathPrefix }}/favicon.ico" />
 </head>
 <body>
   <main class="container">
     <header class="header">
-      <h1><a href="{{ '/' | url }}">People Versus</a></h1>
+      <h1><a href="{{ pathPrefix }}/">People Versus</a></h1>
       <nav>
-        <a href="{{ '/' | url }}">Home</a>
-        <a href="{{ '/about/' | url }}">About</a>
-        <a href="{{ '/tags/' | url }}">Topics</a>
+        <a href="{{ pathPrefix }}/">Home</a>
+        <a href="{{ pathPrefix }}/about/">About</a>
+        <a href="{{ pathPrefix }}/tags/">Topics</a>
         <a href="https://peopleversus.substack.com/subscribe" target="_blank" rel="noopener"><strong>Support</strong></a>
       </nav>
       <hr/>
