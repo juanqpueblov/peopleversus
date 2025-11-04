@@ -1,4 +1,4 @@
-﻿const pluginRss = require("@11ty/eleventy-plugin-rss");
+﻿	const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
 
 module.exports = function(eleventyConfig) {
