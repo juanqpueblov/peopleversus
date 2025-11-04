@@ -1,22 +1,37 @@
-﻿module.exports = function(eleventyConfig) {
-  // Copy static assets if present
-  eleventyConfig.addPassthroughCopy("style.css");
+﻿const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
 
-  // Collection: posts
-  eleventyConfig.addCollection("posts", (api) =>
-    api.getFilteredByTag("posts")
-  );
-
-  // Filter: format a Date to YYYY-MM-DD
-  eleventyConfig.addFilter("ymd", (dateObj) => {
-    const d = new Date(dateObj);
-    // toISOString is UTC; adjust if you want local. For consistency, UTC is fine.
-    return d.toISOString().slice(0, 10);
+module.exports = function(eleventyConfig) {
+  // Plugins
+  eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(pluginSitemap, {
+    sitemap: {
+      // TODO: change to your real domain later (e.g., https://peopleversus.org)
+      hostname: "https://juanqpueblov.github.io/peopleversus"
+    }
   });
 
-  // Shortcode: current year
+  // Static passthroughs
+  eleventyConfig.addPassthroughCopy("style.css");
+  eleventyConfig.addPassthroughCopy({ public: "/" }); // robots.txt, favicon, images, etc.
+
+  // Collections
+  eleventyConfig.addCollection("posts", (collectionApi) =>
+    collectionApi.getFilteredByTag("posts")
+  );
+
+  // Filters/shortcodes
+  eleventyConfig.addFilter("ymd", (dateObj) =>
+    new Date(dateObj).toISOString().slice(0, 10)
+  );
+
+  eleventyConfig.addFilter("absoluteUrl", (path) =>
+    pluginRss.absoluteUrl(path, "https://juanqpueblov.github.io/peopleversus")
+  );
+
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+  // Directories
   return {
     dir: { input: ".", includes: "_includes", output: "_site" }
   };
