@@ -5,8 +5,7 @@ layout: layout.njk
 tags: posts
 permalink: /posts/aurora-sro-aaron-bunch/
 cover_image: "/peopleversus/images/20251104_aaron_bunch.jpg"
-description: "Aurora SRO Aaron "Jake" Bunch arrested."
-
+description: "Aurora SRO Aaron \"Jake\" Bunch arrested."
 ---
 
 # Aurora School Resource Officer's Child Exploitation Arrest Exposes a System Built on Blind Trust  
