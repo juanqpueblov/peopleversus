@@ -1,10 +1,10 @@
 ﻿title: "Aurora School Resource Officer's Child Exploitation Arrest Exposes a System Built on Blind Trust"
 date: 2025-11-04
-tags: posts
 layout: layout.njk
-description: "An exclusive look into how internal complaints were ignored and evidence was buried."
-author: "Juan Q. Pueblo"
-cover\_image: "/peopleversus/images/20251104_aaron_bunch.jpg"
+tags: posts
+permalink: /posts/aurora-sro-aaron-bunch/
+cover_image: "/peopleversus/images/20251104_aaron_bunch.jpg"
+description: "Aurora SRO Aaron "Jake" Bunch arrested."
 
 ---
 
